@@ -28,15 +28,15 @@ class LoginScreen extends StatelessWidget {
           ),
           // Login With
           GestureDetector(
-            // onTap: () async{
-            //   final credential = await signInWithGoogle();
-            //   if(credential.user != null){
-            //     Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainScreen() ));
-            //   }
-            // },
-            onTap : (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainScreen()));
+            onTap: () async{
+              final credential = await signInWithGoogle();
+              if(credential.user != null){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainScreen() ));
+              }
             },
+            // onTap : (){
+            //   Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainScreen()));
+            // },
             child: Container(
               height: MediaQuery.of(context).size.height * 0.11,
               margin: EdgeInsets.only(
